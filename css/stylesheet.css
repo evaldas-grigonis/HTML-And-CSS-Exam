@@ -6,6 +6,7 @@ body {
     --cl-5--:#eeeeee;
     --cl-6--:#ffffff;
     margin: 0;
+    font-family: 'Inter', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -41,10 +42,11 @@ ul {
     margin: 0 auto;
 }
 
+/* Nav */
 header {
     align-items: center;
     gap: 2em;
-    padding: 1.5em 0;
+    padding: 3em 0;
     justify-content: space-between;
 }
 
@@ -65,7 +67,9 @@ nav li:nth-of-type(4) a {
 nav a:hover {
     color: var(--cl-2--)
 }
+/* End Nav */
 
+/* Hero */
 .hero, .bottom-banner {
     align-items: center;
     background-image: url(../img/graphic.png);
@@ -82,7 +86,8 @@ nav a:hover {
 
 .hero h6, .bottom-banner h6 {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 18px;
+    text-transform: uppercase;
     color: var(--cl-2--);
 }
 
@@ -93,24 +98,27 @@ nav a:hover {
 }
 
 .hero p, .bottom-banner p {
-    font-size: 20px;
+    font-size: 22px;
     color: var(--cl-1--);
     padding: 1em 0;
 }
 
 .hero a, .bottom-banner a {
     font-size: 20px;
+    font-weight: 500;
     color: var(--cl-3--);
-    border: 4px solid #ff8139;
-    padding: 0.3em 1em;
+    border: 4px solid var(--cl-4--);
+    padding: 1em 2em;
     border-radius: 100px;
 }
 
 .hero a:hover, .bottom-banner a:hover {
     border-color: #ff3939;
 }
+/* End Hero */
 
-.gradient-banner {
+/* Top Banner */
+.top-banner {
     position: relative;
     align-items: center;
     background-image: url(../img/background.svg);
@@ -118,37 +126,51 @@ nav a:hover {
     background-repeat: no-repeat;
     background-size: cover;
     margin: 2em auto;
+    z-index: -1;
     border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
 
-.gradient-banner-content {
+.top-banner-content {
     padding: 2em;
+    z-index: 1;
 }
 
-.gradient-banner-content h3 {
+.top-banner-content h3 {
     font-weight: 500;
     font-size: clamp(30px, 5vw, 40px);
     color: var(--cl-3--);
     padding: 1em 0;
 }
 
-.gradient-banner-content p {
+.top-banner-content p {
     font-size: 20px;
     color: var(--cl-3--);
 }
+/* End Top Banner */
 
+/* Brands */
 .brands {
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 2em;
     flex-wrap: wrap;
-    padding: 2em 0;
+    padding: 6em 0;
+}
+
+.logo>* {
+    flex: 1 1 5em;
 }
 
 .brands img {
-    max-width: 100px;
+    max-width: 200px;
 }
+/* End Brands */
 
+/* Products */
 .products {
     padding: 2em 0;
 }
@@ -193,10 +215,6 @@ nav a:hover {
     color: var(--cl-4--)
 }
 
-/* .card-right {
-    align-items: flex-end;
-} */
-
 .card-right h6 {
     color: var(--cl-1--);
 }
@@ -218,21 +236,26 @@ nav a:hover {
     gap: 0.5em;
 }
 
+.card-right h6, .card-right p {
+    text-align: right;
+}
+
 .card-content img {
     max-width: 15px;
 }
 
-/* .card-content>* {
-    flex-basis: 100%;
-} */
+/* End Products */
 
+/* Bottom Banner */
 .bottom-banner {
     background-image: url(../img/upsell-footer-image.svg);
     border-width: 3px 0px;
     border-style: solid;
     border-color: var(--cl-5--);
     margin: 2em auto;
-    min-height: calc(50vh - 88px)
+    min-height: calc(50vh - 88px);
+    padding-top: 200px;
+    padding-bottom: 0px;
 }
 
 .bottom-banner h1 {
@@ -240,11 +263,18 @@ nav a:hover {
     font-size: clamp(50px, 10vw, 60px);
     color: var(--cl-3--);
 }
+/* End Bottom Banner */
+
+/* Footer */
+footer {
+    padding: 2em, 0;
+}
 
 .footer {
     flex-wrap: wrap;
     gap: 2em;
-    padding: 2em 0;
+    padding: 8em 0;
+    justify-content: space-between;
 }
 
 .footer-content p {
@@ -259,23 +289,18 @@ nav a:hover {
 }
 
 .social-links a {
-    fill: var(--cl-1--);
-}
-
-.social-links a:hover {
-    fill:var(--cl-2--);
+    max-width: 18px;
 }
 
 .footer-menu {
     flex-wrap: wrap;
     gap: 2em;
-    justify-content: center;
 }
 
 .footer-menu h3 {
     font-weight: 700;
     color: var(--cl-1--);
-    font-size: clamp(20px, 5vw, 25px);
+    font-size: 16px;
     padding-bottom: 1em;
 }
 
@@ -292,9 +317,85 @@ nav a:hover {
     color: var(--cl-2--);
 }
 
+
+
+ .copy-right p {
+    align-items: center;
+    gap: 2em;
+}
+
 .copy-right {
+    justify-content: space-between;
+    flex-wrap: wrap;
     text-align: center;
-    font-size: 12px;
+    font-size: 16px;
     color: var(--cl-1--);
     padding: 1em 0;
+} 
+
+/* End Footer */
+
+/* Media */
+@media screen and (max-width: 800px) {
+    .toggleMenu {
+        position: absolute;
+        right: 5%;
+        background-image: url(../img/icons/menu.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        width: 30px;
+        height: 30px;
+        padding: 2em;
+        z-index: 1000;
+        transition: background-size 0.3s ease-in-out;
+        -webkit-transition: background-size 0.3s ease-in-out;
+        -moz-transition: background-size 0.3s ease-in-out;
+        -ms-transitiom: background-size 0.3s ease-in-out;
+        -o-transition: background-size 0.3s ease-in-out; 
+    }
+    
+    .toggleMenu.active {
+        position: fixed;
+        background-image: url(../img/icons/close.png);
+        background-size: 25px;
+    }
+
+    .nav {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-height: 0;
+        opacity: 0;
+        transform-origin: top;
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transitiom: scale(0);
+        -o-transform: scale(0);
+    }
+
+    .nav.active {
+        position: fixed;
+        inset: 0;
+        margin: auto;
+        max-height: 100%;
+        opacity: 1;
+        background: var(--cl-6--);
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .hero, .bottom-banner {
+        background-position: bottom left;
+        background-size: contain;
+        background-position: top right;
+    } 
 }

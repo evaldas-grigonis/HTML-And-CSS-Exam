@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML-CSS Exam
-    </title>
+    <title>HTML-CSS Exam</title>
+    <script src="js.js"> type="text/javascript"</script>
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <!-- Nav -->
     <header class="row container">
         <a href="#" class="logo">
-        <img src="img/logo.svg" alt="logo">    
+            <img src="img/logo.svg" alt="logo">    
         </a>
-        <div class="menu">
-
+        <div class="toggleMenu" onClick="toggleMenu();"></div>
+            <nav class="nav row">
+                <ul class="row">
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Launch</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                </ul>
         </div>
-        <nav class="nav row">
-            <ul class="row">
-                <li><a href="#">Features</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Launch</a></li>
-                <li><a href="#">Sign Up</a></li>
-            </ul>
         </nav>
     </header>
     <!-- End Nav -->
     <!-- Hero -->
     <section class="hero row container">
-        <div>
+        <div class="hero-content">
             <h6>Launching soon</h6>
             <h1>An NFT like no other</h1>
             <p>Don't miss out on the release of our new NFT. Sign up below to receive updates when we go live.</p>
@@ -38,14 +42,14 @@
         </div>
     </section>
     <!-- End Hero -->
-    <!-- Gradient Banner -->
-    <section class="gradient-banner row container">
-        <div class="gradient-banner-content">
+    <!-- Top Banner -->
+    <section class="top-banner row container">
+        <div class="top-banner-content">
             <h3>Free NFT for early birds.</h3>
             <p>Sign up today and you'll get a free NFT when we launch.</p>
         </div>
     </section>
-    <!-- END Gradient Banner -->
+    <!-- End Top Banner -->
     <!-- Brands -->
     <section class="brands row container">
         <img src="img/companies/1.svg" alt="Brand1">
@@ -59,7 +63,7 @@
     <section class="products container">
         <div class="products-content">
             <h2>LE Super Rare Auction</h2>
-            <p>We have released four limited edition NFTs early which can be bid on via <a href="#">OpenSea</a></p>
+            <p>We have released four limited edition NFTs early which can be bid on via <u><b>OpenSea</b></u></p>
         </div>
         <div class="product-cards row">
             <div class="card">
@@ -68,7 +72,7 @@
                 </div>
                 <div class="card-content row">
                     <div class="card-left">
-                        <h6>Gloop Series</h6>
+                        <h6>GLOOP SERIES</h6>
                         <h5>Purple Man</h5>
                         <p>#12983</p>
                     </div>
@@ -88,7 +92,7 @@
                 </div>
                 <div class="card-content row">
                     <div class="card-left">
-                        <h6>Gloop Series</h6>
+                        <h6>GLOOP SERIES</h6>
                         <h5>Beige</h5>
                         <p>#12983</p>
                     </div>
@@ -108,7 +112,7 @@
                 </div>
                 <div class="card-content row">
                     <div class="card-left">
-                        <h6>Gloop Series</h6>
+                        <h6>GLOOP SERIES</h6>
                         <h5>Red Man</h5>
                         <p>#12983</p>
                     </div>
@@ -128,7 +132,7 @@
                 </div>
                 <div class="card-content row">
                     <div class="card-left">
-                        <h6>Gloop Series</h6>
+                        <h6>GLOOP SERIES</h6>
                         <h5>Green</h5>
                         <p>#12983</p>
                     </div>
@@ -156,15 +160,26 @@
     </section>
     <!-- Bottom Banner -->
     <!-- Footer -->
-    <footer class="footer-menu container">
-        <div class="footer-menu row">
-            <div class="footer-menu content">
+    <footer class="container">
+        <div class="footer row">
+            <div class="footer-content">
                 <a href="#" class="logo">
                     <img src="img/logo.svg" alt="Logo">
                 </a>
                 <p>Exclusive NTF Collection</p>
-                <div class="social icons row">
-
+                <div class="social-links row">
+                    <a href="#">
+                        <img src="img/icons/facebook.png" alt="Facebook Logo">
+                    </a>
+                    <a href="#">
+                        <img src="img/icons/twitter.png" alt="Twitter Logo">
+                    </a>
+                    <a href="#">
+                        <img src="img/icons/instagram.png" alt="Instagram Logo">
+                    </a>
+                    <a href="#">
+                        <img src="img/icons/tik-tok.png" alt="TikTok Logo">
+                    </a>
                 </div>
             </div>
             <div class="footer-menu row">
@@ -200,7 +215,10 @@
                 </div> 
             </div>
         </div>
-        <p class="copy-right">© Copyright 2022 NFTlanding</p>
+        <div class="copy-right row">
+            <p>&copy; Copyright 2022 NFTlanding</p>
+            <p>Launching August 2022</p>
+        </div>
     </footer>
     <!-- End Footer -->
 </body>
